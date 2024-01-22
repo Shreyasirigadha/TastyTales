@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poha Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Poha</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups flattened rice (poha)</li>
+            <li>1 large potato, peeled and diced</li>
+            <li>1 onion, finely chopped</li>
+            <li>1/2 cup green peas</li>
+            <li>1/4 cup peanuts</li>
+            <li>1 green chili, chopped</li>
+            <li>1/2 teaspoon mustard seeds</li>
+            <li>1/2 teaspoon turmeric powder</li>
+            <li>8-10 curry leaves</li>
+            <li>2 tablespoons oil</li>
+            <li>Salt to taste</li>
+            <li>Fresh cilantro, chopped (for garnish)</li>
+            <li>Lemon wedges (for serving)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Tags</h2>
+        <ol>
+            <li>breakfast</li>
+            <li>indian</li>
+            <li>veg</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Rinse the flattened rice (poha) under cold water and set aside to drain excess water.</li>
+            <li>Heat oil in a pan. Add mustard seeds and let them splutter.</li>
+            <li>Add chopped onions, green chili, and curry leaves. Saute until the onions are translucent.</li>
+            <li>Add diced potatoes, green peas, and peanuts. Cook until the potatoes are tender.</li>
+            <li>Add turmeric powder and salt. Mix well.</li>
+            <li>Now, add the rinsed flattened rice (poha) to the pan. Mix gently to combine all the ingredients.</li>
+            <li>Cover and let it cook on low heat for 3-5 minutes, allowing the flavors to meld.</li>
+            <li>Garnish with fresh cilantro and serve hot with lemon wedges.</li>
+            <li>Enjoy your delicious Poha!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="poha">
+        <input type="hidden" name="tags" value="veg">
+        <input type="hidden" name="tags" value="breakfast">
+        <input type="hidden" name="tags" value="indian">
+        <button type="submit">Save Recipe</button>
+      </form>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

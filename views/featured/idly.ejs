@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idly Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Idli Recipe</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups idly rice</li>
+            <li>1 cup urad dal (black gram)</li>
+            <li>1/2 teaspoon fenugreek seeds</li>
+            <li>Salt to taste</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Wash the idly rice, urad dal, and fenugreek seeds separately and soak them in water for 4-6 hours.</li>
+            <li>Grind the soaked urad dal and fenugreek seeds together to a smooth batter. Transfer to a large bowl.</li>
+            <li>Grind the soaked idly rice to a slightly coarse texture. Mix it with the urad dal batter in the bowl.</li>
+            <li>Add salt to the batter and mix well. Allow it to ferment overnight or for at least 8 hours.</li>
+            <li>Grease the idly molds with a little oil and pour the batter into each mold.</li>
+            <li>Steam the idlies for 10-15 minutes or until a toothpick inserted comes out clean.</li>
+            <li>Allow them to cool slightly before removing from the molds.</li>
+            <li>Serve hot idlies with coconut chutney and sambar.</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Egg Bhurji">
+        <input type="hidden" name="ingredients" value="4 eggs, 2 tablespoons vegetable oil, ...">
+        <input type="hidden" name="instructions" value="Crack the eggs into a bowl and beat them lightly with a fork or whisk. ...">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

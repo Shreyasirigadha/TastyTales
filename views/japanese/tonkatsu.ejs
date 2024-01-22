@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonkatsu Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Tonkatsu</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>4 pork loin cutlets</li>
+            <li>Salt and black pepper, to taste</li>
+            <li>1 cup all-purpose flour</li>
+            <li>2 large eggs, beaten</li>
+            <li>1 cup panko breadcrumbs</li>
+            <li>Vegetable oil, for frying</li>
+            <li>Cabbage, shredded (for serving)</li>
+            <li>Tonkatsu sauce (store-bought or homemade) for serving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Tonkatsu</li>
+            <li>Japanese</li>
+            <li>Pork</li>
+            <li>Main Course</li>
+            <li>Crispy</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Season the pork cutlets with salt and black pepper.</li>
+            <li>Dredge each cutlet in flour, dip into beaten eggs, and coat with panko breadcrumbs, pressing the breadcrumbs onto the cutlets to adhere.</li>
+            <li>Heat vegetable oil in a large skillet over medium-high heat. Fry the pork cutlets until golden brown and cooked through, about 4-5 minutes per side.</li>
+            <li>Transfer the tonkatsu to a cutting board and let them rest for a minute. Slice each cutlet into strips.</li>
+            <li>Serve tonkatsu over a bed of shredded cabbage and drizzle with tonkatsu sauce.</li>
+            <li>Enjoy your delicious homemade Tonkatsu!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Tonkatsu">
+        <input type="hidden" name="tags" value="Tonkatsu">
+        <input type="hidden" name="tags" value="Japanese">
+        <input type="hidden" name="tags" value="Pork">
+        <input type="hidden" name="tags" value="Main Course">
+        <input type="hidden" name="tags" value="Crispy">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

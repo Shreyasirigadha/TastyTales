@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Pizza</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 pizza dough (store-bought or homemade)</li>
+            <li>1/2 cup pizza sauce</li>
+            <li>1 1/2 cups shredded mozzarella cheese</li>
+            <li>Your favorite pizza toppings (pepperoni, mushrooms, bell peppers, olives, etc.)</li>
+            <li>1/4 cup grated Parmesan cheese</li>
+            <li>1/2 teaspoon dried oregano</li>
+            <li>1/2 teaspoon garlic powder</li>
+            <li>Red pepper flakes (optional, for added heat)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>dinner</li>
+            <li>italian</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat the oven to the temperature specified on the pizza dough package or recipe.</li>
+            <li>Roll out the pizza dough on a floured surface to your desired thickness.</li>
+            <li>Transfer the rolled-out dough to a pizza stone or baking sheet.</li>
+            <li>Spread pizza sauce evenly over the dough, leaving a small border around the edges.</li>
+            <li>Sprinkle shredded mozzarella cheese over the sauce and add your favorite pizza toppings.</li>
+            <li>Sprinkle grated Parmesan cheese, dried oregano, and garlic powder over the top.</li>
+            <li>If desired, add red pepper flakes for some heat.</li>
+            <li>Bake in the preheated oven according to the pizza dough instructions or until the crust is golden brown and the cheese is melted and bubbly.</li>
+            <li>Remove from the oven, slice, and serve your delicious homemade pizza!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="pizza">
+        <input type="hidden" name="tags" value="dinner">
+        <input type="hidden" name="tags" value="italian">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

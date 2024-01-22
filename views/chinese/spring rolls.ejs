@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Rolls Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Spring Rolls</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>8-10 spring roll wrappers</li>
+            <li>2 cups cooked and shredded chicken or shrimp (or tofu for a vegetarian option)</li>
+            <li>1 cup vermicelli noodles, cooked and cooled</li>
+            <li>1 cup shredded lettuce</li>
+            <li>1 cup matchstick-cut carrots</li>
+            <li>1/2 cup bean sprouts</li>
+            <li>Fresh mint leaves and cilantro for flavor</li>
+            <li>Dipping sauce (hoisin sauce, peanut sauce, or sweet chili sauce)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Appetizer</li>
+            <li>Asian</li>
+            <li>Healthy</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Prepare all the filling ingredients: cooked and shredded chicken or shrimp, vermicelli noodles, shredded lettuce, matchstick-cut carrots, bean sprouts, mint leaves, and cilantro.</li>
+            <li>Fill a shallow dish with warm water. Dip one spring roll wrapper into the water for about 5 seconds until it softens.</li>
+            <li>Place the softened wrapper on a clean surface. Add a small amount of each filling ingredient to the center of the wrapper.</li>
+            <li>Roll up the wrapper, folding in the sides, to form a tight spring roll. Repeat with the remaining wrappers and filling ingredients.</li>
+            <li>Serve the spring rolls with your choice of dipping sauce.</li>
+            <li>Enjoy your delicious Spring Rolls!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="springrolls">
+        <input type="hidden" name="tags" value="Appetizer">
+        <input type="hidden" name="tags" value="Asian">
+        <input type="hidden" name="tags" value="Healthy">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

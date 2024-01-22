@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omelette Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Omelette</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 eggs</li>
+            <li>2 tablespoons milk</li>
+            <li>Salt, to taste</li>
+            <li>Black pepper, to taste</li>
+            <li>1 tablespoon butter or oil</li>
+            <li>Optional fillings: diced vegetables, cheese, ham, mushrooms, etc.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a bowl, beat the eggs and add milk. Season with salt and black pepper. Whisk until well combined.</li>
+            <li>Heat butter or oil in a non-stick skillet over medium heat.</li>
+            <li>Pour the egg mixture into the skillet and let it set for a few seconds.</li>
+            <li>If using fillings, sprinkle them evenly over one half of the omelette.</li>
+            <li>Once the edges start to set, use a spatula to gently lift one side of the omelette and fold it over the fillings, creating a half-moon shape.</li>
+            <li>Cook for another minute or until the omelette is cooked to your liking. You can flip it if needed.</li>
+            <li>Slide the omelette onto a plate and serve hot.</li>
+            <li>Enjoy your delicious and customizable Omelette!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Egg Bhurji">
+        <input type="hidden" name="ingredients" value="4 eggs, 2 tablespoons vegetable oil, ...">
+        <input type="hidden" name="instructions" value="Crack the eggs into a bowl and beat them lightly with a fork or whisk. ...">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

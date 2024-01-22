@@ -1,0 +1,46 @@
+<!-- view_recipe.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title><%= recipe.title %> - Recipe</title>
+</head>
+<body>
+  <header>
+    <h1><%= recipe.title %></h1>
+  </header>
+
+  <section>
+    <h2>Ingredients</h2>
+    <ul>
+      <% recipe.ingredients.forEach(ingredient => { %>
+        <li><%= ingredient %></li>
+      <% }); %>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Procedure</h2>
+    <ol>
+      <% recipe.procedure.forEach(step => { %>
+        <li><%= step %></li>
+      <% }); %>
+    </ol>
+  </section>
+
+  <section>
+    <h3>Tags:</h3>
+    <ul>
+      <% recipe.tags.forEach(tag => { %>
+        <li><%= tag %></li>
+      <% }); %>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+  </footer>
+</body>
+</html>

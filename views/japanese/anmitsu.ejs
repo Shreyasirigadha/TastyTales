@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmitsu Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Anmitsu</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 pack (12 oz) agar agar jelly cubes</li>
+            <li>1 can (15 oz) fruit cocktail, drained</li>
+            <li>1 cup sweet red bean paste (anko)</li>
+            <li>Mochi balls (store-bought or homemade)</li>
+            <li>Shiratama dango (sweet rice dumplings, optional)</li>
+            <li>Ice cream (matcha, vanilla, or your favorite flavor)</li>
+            <li>Kuromitsu (black sugar syrup) for drizzling</li>
+            <li>Kinako (roasted soybean flour) for dusting</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Anmitsu</li>
+            <li>Japanese Dessert</li>
+            <li>Sweet Red Bean</li>
+            <li>Mochi</li>
+            <li>Ice Cream</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Prepare the agar agar jelly according to the package instructions. Once set, cut it into cubes.</li>
+            <li>In serving bowls, arrange the agar agar jelly cubes, fruit cocktail, mochi balls, and shiratama dango (if using).</li>
+            <li>Scoop a generous portion of sweet red bean paste onto the center of each bowl.</li>
+            <li>Place a scoop of ice cream next to the red bean paste.</li>
+            <li>Drizzle kuromitsu over the top and dust with kinako.</li>
+            <li>Serve the Anmitsu immediately and enjoy the delightful combination of textures and flavors!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="anmitsu">
+        <input type="hidden" name="tags" value="Anmitsu">
+        <input type="hidden" name="tags" value="Japanese Dessert">
+        <input type="hidden" name="tags" value="Sweet Red Bean">
+        <input type="hidden" name="tags" value="Mochi">
+        <input type="hidden" name="tags" value="Ice Cream">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

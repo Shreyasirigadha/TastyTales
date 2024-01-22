@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Milkshake</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Chocolate Milkshake</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups chocolate ice cream</li>
+            <li>1 cup milk</li>
+            <li>3 tablespoons chocolate syrup</li>
+            <li>Whipped cream for topping</li>
+            <li>Chocolate shavings or sprinkles for garnish</li>
+            <li>Maraschino cherry for garnish</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Chocolate</li>
+            <li>Milkshake</li>
+            <li>Dessert</li>
+            <li>Indulgent</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a blender, combine chocolate ice cream, milk, and chocolate syrup.</li>
+            <li>Blend until smooth and creamy.</li>
+            <li>Pour the chocolate milkshake into glasses.</li>
+            <li>Top with whipped cream and garnish with chocolate shavings or sprinkles.</li>
+            <li>Add a maraschino cherry on top for a finishing touch.</li>
+            <li>Serve immediately and enjoy your indulgent Chocolate Milkshake!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="chocolatemilkshake">
+        <input type="hidden" name="tags" value="Chocolate">
+        <input type="hidden" name="tags" value="Milkshake">
+        <input type="hidden" name="tags" value="Dessert">
+        <input type="hidden" name="tags" value="Indulgent">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

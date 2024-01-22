@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peking Duck Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Peking Duck</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 Peking duck (about 5-6 pounds)</li>
+            <li>1/4 cup hoisin sauce</li>
+            <li>2 tablespoons soy sauce</li>
+            <li>1 tablespoon rice vinegar</li>
+            <li>1 tablespoon honey</li>
+            <li>1 teaspoon sesame oil</li>
+            <li>1 teaspoon five-spice powder</li>
+            <li>1 bunch green onions, sliced</li>
+            <li>16-20 Mandarin pancakes (store-bought or homemade)</li>
+            <li>Cucumber strips and sliced green onions for garnish</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Chinese</li>
+            <li>Main Dish</li>
+            <li>Crispy</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat the oven to 350°F (175°C).</li>
+            <li>Rinse the Peking duck inside and out, and pat it dry with paper towels.</li>
+            <li>In a small bowl, mix hoisin sauce, soy sauce, rice vinegar, honey, sesame oil, and five-spice powder to make the glaze.</li>
+            <li>Brush the duck with the glaze, ensuring an even coating.</li>
+            <li>Roast the duck in the preheated oven for about 1.5 to 2 hours or until the skin is crispy and the internal temperature reaches 165°F (74°C).</li>
+            <li>While the duck is roasting, warm the Mandarin pancakes according to package instructions.</li>
+            <li>Once the duck is cooked, let it rest for a few minutes before carving.</li>
+            <li>Serve the carved Peking duck on Mandarin pancakes, garnished with sliced green onions and cucumber strips.</li>
+            <li>Enjoy your delicious Peking Duck!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="pekingduck">
+        <input type="hidden" name="tags" value="Chinese">
+        <input type="hidden" name="tags" value="Main Dish">
+        <input type="hidden" name="tags" value="Crispy">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

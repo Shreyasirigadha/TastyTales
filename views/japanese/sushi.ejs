@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Sushi</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>Sushi rice</li>
+            <li>Nori (seaweed) sheets</li>
+            <li>Sushi-grade fish (tuna, salmon, etc.), sliced</li>
+            <li>Vegetables (cucumber, avocado, carrot), julienned</li>
+            <li>Soy sauce, for dipping</li>
+            <li>Wasabi and pickled ginger, for serving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Sushi</li>
+            <li>Japanese</li>
+            <li>Seafood</li>
+            <li>Rice</li>
+            <li>Healthy</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Prepare sushi rice according to package instructions and let it cool to room temperature.</li>
+            <li>Place a sheet of nori on a bamboo sushi rolling mat (makisu).</li>
+            <li>Wet your hands and spread a thin layer of sushi rice over the nori, leaving a 1-inch border at the top.</li>
+            <li>Place slices of sushi-grade fish and julienned vegetables along the bottom edge of the rice.</li>
+            <li>Using the bamboo mat, roll the nori and rice over the filling, applying gentle pressure to form a tight roll.</li>
+            <li>Moisten the top border of the nori with water to seal the roll.</li>
+            <li>Repeat the process with different combinations of fish and vegetables to make various sushi rolls.</li>
+            <li>Using a sharp knife dipped in water, slice each roll into bite-sized pieces.</li>
+            <li>Serve the sushi with soy sauce, wasabi, and pickled ginger.</li>
+            <li>Enjoy your homemade Sushi!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Sushi">
+        <input type="hidden" name="tags" value="Sushi">
+        <input type="hidden" name="tags" value="Japanese">
+        <input type="hidden" name="tags" value="Seafood">
+        <input type="hidden" name="tags" value="Rice">
+        <input type="hidden" name="tags" value="Healthy">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

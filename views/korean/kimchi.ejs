@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimchi Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Kimchi</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 medium Napa cabbage</li>
+            <li>1/4 cup sea salt</li>
+            <li>1 tablespoon grated ginger</li>
+            <li>3 cloves garlic, minced</li>
+            <li>1 tablespoon sugar</li>
+            <li>3 tablespoons fish sauce (or soy sauce for vegan version)</li>
+            <li>3 tablespoons Korean red pepper flakes (Gochugaru)</li>
+            <li>3 green onions, chopped</li>
+            <li>1 medium carrot, julienned</li>
+            <li>1 daikon radish, julienned</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Kimchi</li>
+            <li>Korean</li>
+            <li>Fermented</li>
+            <li>Vegan</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Cut the Napa cabbage in half lengthwise and then into thirds. Rub sea salt between the leaves and place them in a large bowl. Let it sit for about 2 hours, turning occasionally.</li>
+            <li>Rinse the cabbage under cold water to remove excess salt. Squeeze out any excess water and set aside.</li>
+            <li>In a bowl, mix grated ginger, minced garlic, sugar, fish sauce (or soy sauce), and Korean red pepper flakes to make the kimchi paste.</li>
+            <li>Add chopped green onions, julienned carrot, and julienned daikon radish to the paste. Mix well until the vegetables are coated with the paste.</li>
+            <li>Spread the kimchi paste mixture between the leaves of the cabbage, making sure each leaf is coated.</li>
+            <li>Place the kimchi into a clean, airtight jar, pressing it down to remove air bubbles. Leave some space at the top of the jar to allow for expansion.</li>
+            <li>Seal the jar and let it ferment at room temperature for 1-5 days, depending on your desired level of fermentation. Burp the jar daily to release gases.</li>
+            <li>Once fermented, store the kimchi in the refrigerator. It will continue to develop flavor over time.</li>
+            <li>Enjoy your homemade Kimchi!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Kimchi">
+        <input type="hidden" name="tags" value="Kimchi">
+        <input type="hidden" name="tags" value="Korean">
+        <input type="hidden" name="tags" value="Fermented">
+        <input type="hidden" name="tags" value="Vegan">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

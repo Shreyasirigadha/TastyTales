@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Salad Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+
+<body>
+    <header>
+        <h1><marquee height="45">Caesar Salad</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 head romaine lettuce, washed and torn into bite-sized pieces</li>
+            <li>1 cup croutons</li>
+            <li>1/2 cup grated Parmesan cheese</li>
+            <li>1/4 cup Caesar dressing</li>
+            <li>1 lemon, juiced</li>
+            <li>1 teaspoon Dijon mustard</li>
+            <li>2 cloves garlic, minced</li>
+            <li>Salt and black pepper, to taste</li>
+            <li>1/4 cup olive oil</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Tags</h2>
+        <ol>
+            <li>salad</li>
+            <li>side dish</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a small bowl, whisk together lemon juice, Dijon mustard, minced garlic, salt, and black pepper.</li>
+            <li>While whisking, slowly drizzle in the olive oil until the dressing emulsifies.</li>
+            <li>In a large salad bowl, combine the torn romaine lettuce, croutons, and grated Parmesan cheese.</li>
+            <li>Drizzle the Caesar dressing over the salad and toss until everything is well coated.</li>
+            <li>Serve the Caesar Salad immediately as a refreshing side dish.</li>
+            <li>Enjoy your delicious Caesar Salad!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="caesar-salad">
+        <input type="hidden" name="tags" value="salad">
+        <input type="hidden" name="tags" value="side dish">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

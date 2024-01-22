@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Juice</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Apple Juice</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>6-8 medium-sized apples, cored and sliced</li>
+            <li>Water</li>
+            <li>Optional: Sweetener of your choice (sugar, honey, maple syrup), to taste</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Apple</li>
+            <li>Beverage</li>
+            <li>Refreshing</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Place the sliced apples in a large pot.</li>
+            <li>Add enough water to cover the apples.</li>
+            <li>Bring the water to a boil, then reduce the heat and simmer for about 20-30 minutes or until the apples are soft.</li>
+            <li>Remove from heat and let it cool slightly.</li>
+            <li>Using a blender or food processor, blend the cooked apples until smooth.</li>
+            <li>Strain the mixture through a fine-mesh sieve or cheesecloth to extract the juice. You can press the solids to extract more liquid.</li>
+            <li>Taste the apple juice and add sweetener if desired, stirring until it dissolves.</li>
+            <li>Chill the apple juice in the refrigerator.</li>
+            <li>Serve cold over ice and enjoy your refreshing Apple Juice!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="applejuice">
+        <input type="hidden" name="tags" value="Apple">
+        <input type="hidden" name="tags" value="Beverage">
+        <input type="hidden" name="tags" value="Refreshing">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

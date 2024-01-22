@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Tea</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 tea bag or 1 teaspoon loose tea leaves</li>
+            <li>1 cup boiling water</li>
+            <li>Milk (optional)</li>
+            <li>Sugar or sweetener, to taste</li>
+            <li>Lemon or mint for garnish (optional)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Tea</li>
+            <li>Beverage</li>
+            <li>Hot Drink</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Place the tea bag or tea leaves in a teapot or mug.</li>
+            <li>Pour boiling water over the tea bag or leaves.</li>
+            <li>Let it steep for 3-5 minutes, or longer for a stronger flavor.</li>
+            <li>If desired, add milk to the tea and stir.</li>
+            <li>Sweeten the tea with sugar or your preferred sweetener, adjusting to taste.</li>
+            <li>Optional: Garnish with a slice of lemon or a sprig of mint.</li>
+            <li>Stir and enjoy your soothing cup of Tea!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="tea">
+        <input type="hidden" name="tags" value="Tea">
+        <input type="hidden" name="tags" value="Beverage">
+        <input type="hidden" name="tags" value="Hot Drink">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

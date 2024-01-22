@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornbread Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Cornbread</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup cornmeal</li>
+            <li>1 cup all-purpose flour</li>
+            <li>1 tablespoon baking powder</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1 cup milk</li>
+            <li>1/4 cup melted butter</li>
+            <li>1/4 cup honey or maple syrup</li>
+            <li>2 large eggs</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>side dish</li>
+            <li>bread</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat the oven to 400°F (200°C). Grease a 9-inch square baking pan or a similar-sized baking dish.</li>
+            <li>In a large bowl, whisk together the cornmeal, flour, baking powder, and salt.</li>
+            <li>In a separate bowl, whisk together the milk, melted butter, honey or maple syrup, and eggs.</li>
+            <li>Pour the wet ingredients into the dry ingredients and stir until just combined. Do not overmix.</li>
+            <li>Pour the batter into the prepared baking pan and smooth the top.</li>
+            <li>Bake for 20-25 minutes or until the edges are golden brown and a toothpick inserted into the center comes out clean.</li>
+            <li>Allow the cornbread to cool for a few minutes before cutting it into squares.</li>
+            <li>Serve the Cornbread warm and enjoy!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="cornbread">
+        <input type="hidden" name="tags" value="side dish">
+        <input type="hidden" name="tags" value="bread">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

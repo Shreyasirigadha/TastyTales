@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Coffee</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup freshly ground coffee beans</li>
+            <li>Water</li>
+            <li>Milk or cream (optional)</li>
+            <li>Sugar or sweetener (optional), to taste</li>
+            <li>Whipped cream for topping (optional)</li>
+            <li>Cocoa powder or cinnamon for garnish (optional)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Coffee</li>
+            <li>Hot Beverage</li>
+            <li>Caffeine</li>
+            <li>Comfort Drink</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Brew a strong cup of coffee using your preferred method (drip, French press, espresso, etc.).</li>
+            <li>If desired, add sugar or sweetener to the hot coffee and stir until dissolved.</li>
+            <li>Optional: Froth milk or cream using a frother or by heating and whisking until frothy.</li>
+            <li>Pour the brewed coffee into a mug.</li>
+            <li>If using milk or cream, pour it over the coffee.</li>
+            <li>Optional: Top with whipped cream and garnish with cocoa powder or cinnamon.</li>
+            <li>Serve hot and enjoy your comforting cup of Coffee!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="coffee">
+        <input type="hidden" name="tags" value="Coffee">
+        <input type="hidden" name="tags" value="Hot Beverage">
+        <input type="hidden" name="tags" value="Caffeine">
+        <input type="hidden" name="tags" value="Comfort Drink">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

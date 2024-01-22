@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vada Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Vada</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup urad dal (black gram)</li>
+            <li>1/4 cup soaked and drained chana dal (split chickpeas)</li>
+            <li>2-3 green chilies, chopped</li>
+            <li>1 inch ginger, grated</li>
+            <li>A handful of fresh cilantro, chopped</li>
+            <li>1 teaspoon cumin seeds</li>
+            <li>1/2 teaspoon black pepper</li>
+            <li>Salt to taste</li>
+            <li>Oil for deep frying</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Tags</h2>
+        <ol>
+            <li>breakfast</li>
+            <li>indian</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Wash urad dal and chana dal under cold water. Soak them together in water for at least 4 hours.</li>
+            <li>Drain the water and grind the dals into a smooth, thick batter using minimal water. The batter should be fluffy and airy.</li>
+            <li>Add chopped green chilies, grated ginger, chopped cilantro, cumin seeds, black pepper, and salt to the batter. Mix well.</li>
+            <li>Heat oil in a deep frying pan over medium heat.</li>
+            <li>Wet your hands, take a small portion of the batter, and shape it into a flat round disc with a hole in the center, creating a vada shape.</li>
+            <li>Gently slide the shaped vada into the hot oil. Fry until both sides are golden brown and the vada is cooked through.</li>
+            <li>Remove the vada using a slotted spoon and place them on paper towels to absorb excess oil.</li>
+            <li>Repeat the process for the remaining batter.</li>
+            <li>Serve the vada hot with coconut chutney or sambar.</li>
+            <li>Enjoy your delicious Vada!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="vada">
+        <input type="hidden" name="tags" value="breakfast">
+        <input type="hidden" name="tags" value="indian">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

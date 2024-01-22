@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Fry Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Fish Fry</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>500g fish fillets (any white fish)</li>
+            <li>1 cup all-purpose flour</li>
+            <li>2 tablespoons rice flour</li>
+            <li>1 tablespoon red chili powder</li>
+            <li>1 teaspoon turmeric powder</li>
+            <li>1 teaspoon cumin powder</li>
+            <li>1 teaspoon coriander powder</li>
+            <li>1 teaspoon garlic powder</li>
+            <li>1 teaspoon ginger powder</li>
+            <li>Salt to taste</li>
+            <li>Vegetable oil for frying</li>
+            <li>Lemon wedges for serving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>seafood</li>
+            <li>fried</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a bowl, mix all-purpose flour, rice flour, red chili powder, turmeric powder, cumin powder, coriander powder, garlic powder, ginger powder, and salt.</li>
+            <li>Coat each fish fillet with the flour mixture, ensuring it's well covered on both sides.</li>
+            <li>Heat vegetable oil in a pan for frying.</li>
+            <li>Gently place the coated fish fillets in the hot oil and fry until golden brown and crispy on both sides.</li>
+            <li>Remove the fish from the oil and place them on a paper towel to absorb excess oil.</li>
+            <li>Serve hot with lemon wedges on the side.</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="fish fry">
+        <input type="hidden" name="tags" value="seafood">
+        <input type="hidden" name="tags" value="fried">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

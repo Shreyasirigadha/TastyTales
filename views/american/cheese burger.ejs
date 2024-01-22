@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheeseburger Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+
+<body>
+    <header>
+        <h1><marquee height="45">Cheeseburger</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 lb ground beef</li>
+            <li>Salt and black pepper, to taste</li>
+            <li>4 hamburger buns</li>
+            <li>4 slices of cheese (cheddar, American, or your choice)</li>
+            <li>Lettuce leaves</li>
+            <li>Sliced tomatoes</li>
+            <li>Sliced onions</li>
+            <li>Pickles</li>
+            <li>Ketchup, mustard, and mayonnaise</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Tags</h2>
+        <ol>
+            <li>main course</li>
+            <li>burger</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Divide the ground beef into 4 equal portions and shape them into burger patties. Season with salt and black pepper.</li>
+            <li>Preheat the grill or stovetop pan over medium-high heat.</li>
+            <li>Grill the burger patties to your desired level of doneness, adding a slice of cheese during the last minute of cooking to melt.</li>
+            <li>Toast the hamburger buns on the grill or in a toaster.</li>
+            <li>Assemble the cheeseburgers by placing a lettuce leaf on the bottom bun, followed by the cooked patty with melted cheese, sliced tomatoes, onions, pickles, and condiments of your choice.</li>
+            <li>Top with the other half of the bun.</li>
+            <li>Serve the cheeseburgers hot and enjoy!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="cheeseburger">
+        <input type="hidden" name="tags" value="main course">
+        <input type="hidden" name="tags" value="burger">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

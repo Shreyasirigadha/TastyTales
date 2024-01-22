@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Ice Cream Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Mango Ice Cream</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups ripe mango puree</li>
+            <li>1 cup heavy cream</li>
+            <li>1 cup whole milk</li>
+            <li>1/2 cup granulated sugar</li>
+            <li>1 teaspoon lemon juice</li>
+            <li>Pinch of salt</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>icecream</li>
+            <li>dessert</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a blender, combine ripe mango puree, heavy cream, whole milk, granulated sugar, lemon juice, and a pinch of salt. Blend until smooth.</li>
+            <li>Chill the mango mixture in the refrigerator for at least 2 hours or until it is thoroughly chilled.</li>
+            <li>Transfer the chilled mango mixture to an ice cream maker and churn according to the manufacturer's instructions.</li>
+            <li>Once churned, transfer the mango ice cream to a lidded container and freeze for at least 4 hours or until firm.</li>
+            <li>Scoop and enjoy the tropical and refreshing Mango Ice Cream!</li>
+        </ol>
+    </section>
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="mango">
+        <input type="hidden" name="tags" value="icecream">
+        <input type="hidden" name="tags" value="dessert">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

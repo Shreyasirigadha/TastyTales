@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tteokbokki Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Tteokbokki</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups Korean rice cakes (tteok)</li>
+            <li>1 cup fish cakes, sliced into thin strips</li>
+            <li>3 cups water</li>
+            <li>1/4 cup Korean red pepper paste (gochujang)</li>
+            <li>1 tablespoon soy sauce</li>
+            <li>1 tablespoon sugar</li>
+            <li>1 teaspoon Korean red pepper flakes (gochugaru), optional for extra heat</li>
+            <li>2 hard-boiled eggs, halved (optional, for serving)</li>
+            <li>2 green onions, chopped (for garnish)</li>
+            <li>Sesame seeds (for garnish)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Tteokbokki</li>
+            <li>Korean</li>
+            <li>Spicy</li>
+            <li>Rice Cakes</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a pot, bring water to a boil and cook the rice cakes for about 5 minutes until they are soft and chewy. Drain and set aside.</li>
+            <li>In the same pot, combine water, red pepper paste, soy sauce, sugar, and red pepper flakes (if using). Stir until the ingredients are well combined and the sauce is smooth.</li>
+            <li>Add the cooked rice cakes and fish cakes to the sauce. Simmer over medium heat, stirring occasionally, until the sauce thickens and coats the rice cakes and fish cakes (about 10-15 minutes).</li>
+            <li>If desired, add hard-boiled eggs to the pot during the last few minutes of cooking to heat them through.</li>
+            <li>Serve Tteokbokki in bowls, garnished with chopped green onions and sesame seeds.</li>
+            <li>Enjoy your delicious and spicy Tteokbokki!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Tteokbokki">
+        <input type="hidden" name="tags" value="Tteokbokki">
+        <input type="hidden" name="tags" value="Korean">
+        <input type="hidden" name="tags" value="Spicy">
+        <input type="hidden" name="tags" value="Rice Cakes">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

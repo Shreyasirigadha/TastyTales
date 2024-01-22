@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Hamburger</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 pound ground beef (80% lean)</li>
+            <li>Salt and black pepper to taste</li>
+            <li>4 hamburger buns</li>
+            <li>Lettuce leaves</li>
+            <li>Sliced tomatoes</li>
+            <li>Sliced red onion</li>
+            <li>Pickle slices</li>
+            <li>Ketchup, mustard, and mayonnaise for condiments</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>lunch</li>
+            <li>grilling</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Divide the ground beef into 4 equal portions and shape them into burger patties. Season each patty with salt and black pepper.</li>
+            <li>Preheat a grill or skillet over medium-high heat. Cook the burger patties for 3-4 minutes per side or until they reach your desired level of doneness.</li>
+            <li>Toast the hamburger buns on the grill or in a toaster until lightly golden.</li>
+            <li>Assemble the hamburgers by placing a lettuce leaf on the bottom half of each bun. Top with a cooked patty and add sliced tomatoes, red onion, and pickles.</li>
+            <li>Spread ketchup, mustard, and mayonnaise on the top half of the buns. Place the top bun over the toppings to complete the hamburgers.</li>
+            <li>Serve the hamburgers hot and enjoy!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="hamburger">
+        <input type="hidden" name="tags" value="lunch">
+        <input type="hidden" name="tags" value="grilling">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

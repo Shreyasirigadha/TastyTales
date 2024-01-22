@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Ice Cream Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Matcha Ice Cream</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups heavy cream</li>
+            <li>1 cup whole milk</li>
+            <li>3/4 cup granulated sugar</li>
+            <li>2 tablespoons matcha powder</li>
+            <li>4 large egg yolks</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>Pinch of salt</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Matcha Ice Cream</li>
+            <li>Dessert</li>
+            <li>Ice Cream</li>
+            <li>Japanese</li>
+            <li>Matcha</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a saucepan, heat the heavy cream and whole milk over medium heat until it just begins to simmer. Remove from heat.</li>
+            <li>In a separate bowl, whisk together sugar and matcha powder until well combined.</li>
+            <li>In another bowl, whisk the egg yolks. Gradually whisk in the matcha sugar mixture until smooth and well combined.</li>
+            <li>Slowly pour the hot milk mixture into the matcha egg mixture, whisking constantly to avoid curdling.</li>
+            <li>Return the mixture to the saucepan and heat over medium heat, stirring constantly, until it thickens and coats the back of a spoon (about 170°F or 77°C).</li>
+            <li>Strain the mixture through a fine-mesh sieve into a clean bowl to remove any lumps. Allow it to cool to room temperature.</li>
+            <li>Stir in vanilla extract and a pinch of salt. Cover the bowl and refrigerate for at least 4 hours or overnight.</li>
+            <li>Churn the mixture in an ice cream maker according to the manufacturer's instructions.</li>
+            <li>Transfer the churned ice cream to a lidded container and freeze until firm.</li>
+            <li>Scoop and serve the delicious Matcha Ice Cream!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Matcha Ice Cream">
+        <input type="hidden" name="tags" value="Matcha Ice Cream">
+        <input type="hidden" name="tags" value="Dessert">
+        <input type="hidden" name="tags" value="Ice Cream">
+        <input type="hidden" name="tags" value="Japanese">
+        <input type="hidden" name="tags" value="Matcha">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

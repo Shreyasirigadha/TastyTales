@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocado Toast Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Avocado Toast</marquee></h1>
+        </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 slices of whole-grain bread</li>
+            <li>1 ripe avocado</li>
+            <li>1 tablespoon lemon juice</li>
+            <li>Salt and pepper to taste</li>
+            <li>Red pepper flakes (optional, for spice)</li>
+            <li>Cherry tomatoes, sliced (for garnish)</li>
+            <li>Fresh cilantro or parsley, chopped (for garnish)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Tags</h2>
+        <ol>
+            <li>veg</li>
+            <li>vegan</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Toast the slices of whole-grain bread to your liking.</li>
+            <li>While the bread is toasting, cut the ripe avocado in half, remove the pit, and scoop the flesh into a bowl.</li>
+            <li>Add lemon juice, salt, and pepper to the avocado. Mash and mix the ingredients together until you achieve your desired guacamole-like consistency.</li>
+            <li>Spread the mashed avocado evenly over the toasted bread slices.</li>
+            <li>Sprinkle red pepper flakes for added spice if desired.</li>
+            <li>Garnish with sliced cherry tomatoes and chopped fresh cilantro or parsley.</li>
+            <li>Serve immediately and enjoy your delicious and nutritious avocado toast!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Avocado toast">
+        <input type="hidden" name="tags" value="veg">
+        <input type="hidden" name="tags" value="vegan">
+        <input type="hidden" name="tags" value="breakfast">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

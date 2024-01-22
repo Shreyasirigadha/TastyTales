@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Juice Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Mango Juice</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 ripe mangoes, peeled and diced</li>
+            <li>2 cups cold water</li>
+            <li>2 tablespoons sugar (adjust to taste)</li>
+            <li>Ice cubes (optional)</li>
+            <li>Mint leaves for garnish (optional)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Place the diced mangoes in a blender.</li>
+            <li>Add cold water and sugar to the blender.</li>
+            <li>Blend until smooth and the sugar is fully dissolved.</li>
+            <li>Strain the mango mixture to remove any fibers, using a fine-mesh sieve or cheesecloth.</li>
+            <li>Chill the mango juice in the refrigerator for at least 1 hour.</li>
+            <li>Serve the mango juice over ice cubes if desired.</li>
+            <li>Garnish with mint leaves for a refreshing touch.</li>
+            <li>Enjoy your homemade mango juice!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Egg Bhurji">
+        <input type="hidden" name="ingredients" value="4 eggs, 2 tablespoons vegetable oil, ...">
+        <input type="hidden" name="instructions" value="Crack the eggs into a bowl and beat them lightly with a fork or whisk. ...">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- delete_confirmation.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ... (head content remains unchanged) ... -->
+</head>
+<body>
+  <h1>Delete Recipe</h1>
+  <p>Are you sure you want to delete the recipe?</p>
+  <h2><%= recipe.title %></h2>
+  <form action="/delete/<%= recipe._id %>" method="POST">
+    <button type="submit">Yes, Delete</button>
+  </form>
+  <a href="/">Cancel</a>
+</body>
+</html>

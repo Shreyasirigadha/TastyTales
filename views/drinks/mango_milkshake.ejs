@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Milkshake</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Mango Milkshake</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 ripe mangoes, peeled and diced</li>
+            <li>2 cups vanilla ice cream</li>
+            <li>1 cup milk</li>
+            <li>2 tablespoons sugar (optional, adjust to taste)</li>
+            <li>Whipped cream for topping</li>
+            <li>Mango slices or mint leaves for garnish</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Mango Milkshake</li>
+            <li>Beverage</li>
+            <li>Smoothie</li>
+            <li>Summer Drink</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a blender, combine diced mangoes, vanilla ice cream, milk, and sugar.</li>
+            <li>Blend until smooth and creamy.</li>
+            <li>Taste the mango milkshake and adjust sweetness if needed by adding more sugar.</li>
+            <li>Pour the mango milkshake into glasses.</li>
+            <li>Top with whipped cream and garnish with mango slices or mint leaves.</li>
+            <li>Serve immediately and enjoy your delicious Mango Milkshake!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="mango_milkshake">
+        <input type="hidden" name="tags" value="Mango Milkshake">
+        <input type="hidden" name="tags" value="Beverage">
+        <input type="hidden" name="tags" value="Smoothie">
+        <input type="hidden" name="tags" value="Summer Drink">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukiyaki Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Sukiyaki</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 pound thinly sliced beef (sirloin or ribeye)</li>
+            <li>1/2 cup soy sauce</li>
+            <li>1/4 cup mirin (sweet rice wine)</li>
+            <li>1/4 cup sake (Japanese rice wine)</li>
+            <li>3 tablespoons sugar</li>
+            <li>1 tablespoon vegetable oil</li>
+            <li>1 onion, thinly sliced</li>
+            <li>2 leeks, cut into 2-inch pieces</li>
+            <li>1/2 napa cabbage, sliced</li>
+            <li>1/2 package of shirataki noodles, rinsed and drained</li>
+            <li>4 ounces enoki mushrooms, bottom trimmed</li>
+            <li>4 ounces shiitake mushrooms, sliced</li>
+            <li>4 green onions, cut into 2-inch pieces</li>
+            <li>4 eggs (optional, for dipping)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Sukiyaki</li>
+            <li>Japanese</li>
+            <li>Beef</li>
+            <li>Hot Pot</li>
+            <li>Interactive</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a bowl, mix together soy sauce, mirin, sake, and sugar to create the sukiyaki sauce. Set aside.</li>
+            <li>Heat vegetable oil in a large sukiyaki pot or a deep skillet over medium heat.</li>
+            <li>Add thinly sliced beef to the pot and cook until browned.</li>
+            <li>Pour the sukiyaki sauce over the beef and mix well.</li>
+            <li>Add onion, leeks, napa cabbage, shirataki noodles, enoki mushrooms, shiitake mushrooms, and green onions to the pot.</li>
+            <li>Stir and cook until the vegetables are tender and the flavors meld together.</li>
+            <li>Optional: Beat the eggs and serve them in individual bowls for dipping.</li>
+            <li>Serve the Sukiyaki hot and enjoy the interactive and flavorful experience!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Sukiyaki">
+        <input type="hidden" name="tags" value="Sukiyaki">
+        <input type="hidden" name="tags" value="Japanese">
+        <input type="hidden" name="tags" value="Beef">
+        <input type="hidden" name="tags" value="Hot Pot">
+        <input type="hidden" name="tags" value="Interactive">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

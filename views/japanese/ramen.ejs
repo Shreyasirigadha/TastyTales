@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Ramen</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>4 packs of ramen noodles</li>
+            <li>4 cups chicken or vegetable broth</li>
+            <li>2 tablespoons soy sauce</li>
+            <li>1 tablespoon miso paste</li>
+            <li>1 tablespoon sesame oil</li>
+            <li>1 tablespoon grated fresh ginger</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 cup sliced shiitake mushrooms</li>
+            <li>1 cup baby spinach</li>
+            <li>4 soft-boiled eggs, halved</li>
+            <li>4 green onions, sliced</li>
+            <li>Nori (seaweed) sheets, for garnish</li>
+            <li>Sesame seeds, for garnish</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Ramen</li>
+            <li>Noodles</li>
+            <li>Soup</li>
+            <li>Japanese</li>
+            <li>Comfort Food</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Cook the ramen noodles according to package instructions. Drain and set aside.</li>
+            <li>In a large pot, heat the broth over medium heat. Add soy sauce, miso paste, sesame oil, grated ginger, and minced garlic. Stir until the miso paste is dissolved.</li>
+            <li>Add sliced shiitake mushrooms to the broth and simmer for 5 minutes until they are tender.</li>
+            <li>Divide the cooked ramen noodles among serving bowls. Ladle the hot broth and mushrooms over the noodles.</li>
+            <li>Top each bowl with baby spinach, soft-boiled eggs, sliced green onions, nori sheets, and sesame seeds.</li>
+            <li>Serve the Ramen hot and enjoy this comforting and flavorful dish!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Ramen">
+        <input type="hidden" name="tags" value="Ramen">
+        <input type="hidden" name="tags" value="Noodles">
+        <input type="hidden" name="tags" value="Soup">
+        <input type="hidden" name="tags" value="Japanese">
+        <input type="hidden" name="tags" value="Comfort Food">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

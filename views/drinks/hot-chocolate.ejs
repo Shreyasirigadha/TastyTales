@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Chocolate</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Hot Chocolate</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups milk</li>
+            <li>2 tablespoons cocoa powder</li>
+            <li>2 tablespoons sugar</li>
+            <li>1/4 cup water</li>
+            <li>1/4 teaspoon vanilla extract</li>
+            <li>Whipped cream for topping</li>
+            <li>Chocolate shavings or cinnamon for garnish</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Hot Chocolate</li>
+            <li>Hot Drink</li>
+            <li>Chocolate</li>
+            <li>Comfort Drink</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a small bowl, mix cocoa powder and sugar. Add water and vanilla extract, and stir to form a smooth paste.</li>
+            <li>In a saucepan, heat the milk over medium heat until it's warm but not boiling.</li>
+            <li>Whisk the cocoa paste into the warm milk until well combined.</li>
+            <li>Continue to heat the mixture, stirring constantly, until it reaches your desired hot chocolate temperature.</li>
+            <li>Pour the hot chocolate into mugs.</li>
+            <li>Top with whipped cream and garnish with chocolate shavings or cinnamon.</li>
+            <li>Serve hot and enjoy your delicious Hot Chocolate!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="hot_chocolate">
+        <input type="hidden" name="tags" value="Hot Chocolate">
+        <input type="hidden" name="tags" value="Hot Drink">
+        <input type="hidden" name="tags" value="Chocolate">
+        <input type="hidden" name="tags" value="Comfort Drink">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

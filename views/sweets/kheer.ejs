@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kheer Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Kheer</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1/2 cup basmati rice</li>
+            <li>4 cups whole milk</li>
+            <li>1/2 cup sugar (adjust to taste)</li>
+            <li>1/4 cup chopped nuts (almonds, cashews, pistachios)</li>
+            <li>1/4 cup raisins</li>
+            <li>1/2 teaspoon cardamom powder</li>
+            <li>Saffron strands soaked in warm milk (optional)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>sweet</li>
+            <li>dessert</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Rinse the basmati rice under cold water and soak it in water for 30 minutes. Drain the water.</li>
+            <li>In a heavy-bottomed pan, bring the whole milk to a boil. Add the soaked and drained rice to the milk.</li>
+            <li>Simmer on low heat, stirring frequently to avoid sticking, until the rice is cooked and the milk has thickened (approximately 30-40 minutes).</li>
+            <li>Add sugar, chopped nuts, raisins, and cardamom powder. Continue to simmer until the kheer reaches your desired consistency.</li>
+            <li>If using saffron, add the soaked saffron strands along with the warm milk to the kheer for a rich flavor and color.</li>
+            <li>Remove from heat and let the kheer cool for a few minutes before serving.</li>
+            <li>Serve the delicious Kheer warm or chilled, garnished with additional nuts if desired.</li>
+        </ol>
+    </section>
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="kheer">
+        <input type="hidden" name="tags" value="sweet">
+        <input type="hidden" name="tags" value="dessert">
+        <button type="submit">Save Recipe</button>
+      </form>
+    
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotdog Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Hotdog</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>4 hotdog buns</li>
+            <li>4 beef or pork hotdogs</li>
+            <li>1/2 cup diced onions</li>
+            <li>1/2 cup diced tomatoes</li>
+            <li>1/4 cup pickle relish</li>
+            <li>Mustard and ketchup for topping</li>
+            <li>4 slices of your favorite cheese (optional)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>lunch</li>
+            <li>grilling</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat a grill or stovetop grilling pan over medium heat.</li>
+            <li>Grill the hotdogs until they are heated through and have grill marks, turning occasionally.</li>
+            <li>While the hotdogs are grilling, toast the hotdog buns on the grill or in a toaster until lightly golden.</li>
+            <li>Place a grilled hotdog into each bun.</li>
+            <li>Top each hotdog with diced onions, diced tomatoes, pickle relish, and your choice of mustard and ketchup.</li>
+            <li>If desired, add a slice of cheese on top of each hotdog.</li>
+            <li>Serve the hotdogs immediately, and enjoy your delicious hotdog creation!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="hotdog">
+        <input type="hidden" name="tags" value="lunch">
+        <input type="hidden" name="tags" value="grilling">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

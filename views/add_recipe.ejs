@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Recipe Book - Add Recipe</title>
+</head>
+
+<style> 
+  .centered-box {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  #file-label {
+      margin-bottom: 10px;
+  }
+
+  header {
+      
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+  }
+
+  body {
+      background-image: url('form6.jpg');
+      background-size: cover; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      
+  }
+  label{
+      color: white;
+  }
+  #file-and-description-container{
+      color: white;
+  }
+  form{
+    text-align: center;
+  }
+  p,h2{
+    font-style: italic;
+  }
+</style>
+</head>
+
+<body>
+  <h2>New Recipes</h2>
+  <p>
+      Craft Your Culinary Masterpieces:<br>
+      Add Your Own Flavors to the Recipe of Life!</p>
+
+  <form action="/add" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients" required></textarea><br><br>
+
+    <label for="procedure">Procedure:</label>
+    <textarea id="procedure" name="procedure" required></textarea><br><br>
+
+    <label for="tags">Tags (comma-separated):</label>
+    <input type="text" id="tags" name="tags" required><br><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea><br><br>
+
+    <button type="submit">Add Recipe</button>
+  </form>
+  <a href="/">Back to Recipe List</a>
+</body>
+</html>

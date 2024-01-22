@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kova Sweet Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Kova Sweet</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups full-fat milk</li>
+            <li>1 tablespoon lemon juice or white vinegar</li>
+            <li>1/4 cup sugar (adjust to taste)</li>
+            <li>1/2 teaspoon cardamom powder</li>
+            <li>Chopped nuts for garnish (almonds, pistachios, etc.)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>sweet</li>
+            <li>dessert</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Boil the full-fat milk in a heavy-bottomed pan. Once it boils, add lemon juice or vinegar to curdle the milk. Stir until the whey separates from the curd.</li>
+            <li>Strain the curdled milk using a muslin cloth to obtain chenna (paneer). Discard the whey.</li>
+            <li>Now, crumble the chenna with your hands to get a grainy texture (kova). This is also known as khoya.</li>
+            <li>Heat a non-stick pan and add the crumbled chenna. Cook on low to medium heat, stirring continuously to prevent burning.</li>
+            <li>Add sugar and continue cooking until the kova thickens and leaves the sides of the pan. Add cardamom powder and mix well.</li>
+            <li>Remove from heat and let it cool for a few minutes. Shape the kova into small round balls or any desired shape.</li>
+            <li>Garnish with chopped nuts and let the kova sweets cool completely before serving.</li>
+            <li>Serve and enjoy the delicious Kova Sweet!</li>
+        </ol>
+    </section>
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="kova">
+        <input type="hidden" name="tags" value="sweet">
+        <input type="hidden" name="tags" value="dessert">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

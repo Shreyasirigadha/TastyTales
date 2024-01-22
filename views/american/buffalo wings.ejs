@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffalo Wings Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Buffalo Wings</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 pounds chicken wings, split at joints, tips discarded</li>
+            <li>1 cup all-purpose flour</li>
+            <li>1 teaspoon garlic powder</li>
+            <li>1 teaspoon onion powder</li>
+            <li>1/2 teaspoon cayenne pepper</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/4 teaspoon black pepper</li>
+            <li>1/2 cup unsalted butter</li>
+            <li>1/2 cup hot sauce (such as Frank's RedHot)</li>
+            <li>1 tablespoon honey</li>
+            <li>1 teaspoon Worcestershire sauce</li>
+            <li>Blue cheese dressing and celery sticks for serving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>appetizer</li>
+            <li>spicy</li>
+            <li>chicken</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat the oven to 400°F (200°C).</li>
+            <li>In a large bowl, combine flour, garlic powder, onion powder, cayenne pepper, salt, and black pepper.</li>
+            <li>Dredge the chicken wings in the flour mixture, shaking off excess.</li>
+            <li>Place a wire rack on a baking sheet and arrange the wings on the rack. Bake for 45-50 minutes or until golden brown and crispy.</li>
+            <li>In a saucepan over medium heat, melt butter. Stir in hot sauce, honey, and Worcestershire sauce. Simmer for a few minutes, stirring occasionally.</li>
+            <li>In a large bowl, toss the baked wings in the buffalo sauce until well coated.</li>
+            <li>Serve the Buffalo Wings with blue cheese dressing and celery sticks on the side.</li>
+            <li>Enjoy your spicy and flavorful Buffalo Wings!</li>
+        </ol>
+    </section>
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="buffalo-wings">
+        <input type="hidden" name="tags" value="appetizer">
+        <input type="hidden" name="tags" value="spicy">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

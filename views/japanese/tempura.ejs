@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempura Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Tempura</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>Assorted vegetables (zucchini, sweet potatoes, bell peppers, etc.)</li>
+            <li>Seafood (shrimp, fish fillets, squid, etc.)</li>
+            <li>1 cup all-purpose flour</li>
+            <li>1 cup ice-cold water</li>
+            <li>1 egg, beaten</li>
+            <li>Ice cubes</li>
+            <li>Vegetable oil, for frying</li>
+            <li>Soy sauce, for dipping</li>
+            <li>Tempura dipping sauce (tentsuyu), optional</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Tempura</li>
+            <li>Japanese</li>
+            <li>Fried</li>
+            <li>Seafood</li>
+            <li>Vegetables</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Prepare the vegetables and seafood by cutting them into bite-sized pieces.</li>
+            <li>In a large bowl, mix flour, ice-cold water, beaten egg, and ice cubes. Stir until the batter is just combined. It's okay if there are lumps.</li>
+            <li>Heat vegetable oil in a deep fryer or large pot to 350°F (180°C).</li>
+            <li>Dip the vegetables and seafood into the tempura batter, coating them evenly.</li>
+            <li>Carefully place the coated pieces into the hot oil and fry until golden brown and crispy. Work in batches to avoid overcrowding the fryer.</li>
+            <li>Remove the tempura with a slotted spoon and place them on a plate lined with paper towels to drain excess oil.</li>
+            <li>Serve the tempura hot with soy sauce for dipping. Optionally, serve with tempura dipping sauce (tentsuyu).</li>
+            <li>Enjoy your delicious homemade Tempura!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Tempura">
+        <input type="hidden" name="tags" value="Tempura">
+        <input type="hidden" name="tags" value="Japanese">
+        <input type="hidden" name="tags" value="Fried">
+        <input type="hidden" name="tags" value="Seafood">
+        <input type="hidden" name="tags" value="Vegetables">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

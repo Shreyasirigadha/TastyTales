@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibimbap Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Bibimbap</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups cooked short-grain rice</li>
+            <li>1 cup julienned carrots, sautéed</li>
+            <li>1 cup sliced shiitake mushrooms, sautéed</li>
+            <li>1 cup spinach, blanched and seasoned</li>
+            <li>1 cup bean sprouts, blanched</li>
+            <li>1 cup thinly sliced cucumber</li>
+            <li>4 fried eggs</li>
+            <li>Sesame oil for drizzling</li>
+            <li>Soy sauce for seasoning</li>
+            <li>Gochujang (Korean red pepper paste) for serving</li>
+            <li>Sesame seeds for garnish</li>
+            <li>Chopped green onions for garnish</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Bibimbap</li>
+            <li>Korean</li>
+            <li>Rice</li>
+            <li>Veggies</li>
+            <li>Eggs</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Divide the cooked rice among serving bowls.</li>
+            <li>Arrange the sautéed carrots, mushrooms, seasoned spinach, bean sprouts, and sliced cucumber on top of the rice in a visually appealing manner.</li>
+            <li>Place a fried egg on the center of each bowl.</li>
+            <li>Drizzle sesame oil over the ingredients and season with soy sauce to taste.</li>
+            <li>Serve with a side of gochujang for extra flavor.</li>
+            <li>Garnish with sesame seeds and chopped green onions.</li>
+            <li>Mix everything together before eating to enjoy the flavors of Bibimbap.</li>
+            <li>Enjoy your delicious Bibimbap!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Bibimbap">
+        <input type="hidden" name="tags" value="Bibimbap">
+        <input type="hidden" name="tags" value="Korean">
+        <input type="hidden" name="tags" value="Rice">
+        <input type="hidden" name="tags" value="Veggies">
+        <input type="hidden" name="tags" value="Eggs">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

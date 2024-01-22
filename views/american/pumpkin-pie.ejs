@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumpkin Pie Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Pumpkin Pie</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 9-inch unbaked pie crust</li>
+            <li>1 can (15 oz) pumpkin puree</li>
+            <li>1 cup granulated sugar</li>
+            <li>1 teaspoon ground cinnamon</li>
+            <li>1/2 teaspoon ground ginger</li>
+            <li>1/4 teaspoon ground cloves</li>
+            <li>1/2 teaspoon salt</li>
+            <li>2 large eggs</li>
+            <li>1 can (12 oz) evaporated milk</li>
+            <li>Whipped cream for serving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>dessert</li>
+            <li>holiday</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat the oven to 425°F (220°C).</li>
+            <li>Fit the pie crust into a 9-inch pie dish and crimp the edges.</li>
+            <li>In a large bowl, whisk together the pumpkin puree, sugar, cinnamon, ginger, cloves, and salt.</li>
+            <li>Beat the eggs in a separate bowl and then add them to the pumpkin mixture. Mix well.</li>
+            <li>Gradually stir in the evaporated milk until everything is well combined.</li>
+            <li>Pour the pumpkin filling into the prepared pie crust.</li>
+            <li>Bake in the preheated oven for 15 minutes. Reduce the oven temperature to 350°F (175°C) and continue baking for 40-50 minutes or until a knife inserted into the center comes out clean.</li>
+            <li>Allow the pumpkin pie to cool completely before serving.</li>
+            <li>Serve slices of pumpkin pie with a dollop of whipped cream on top.</li>
+            <li>Enjoy your delicious homemade Pumpkin Pie!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="pumpkin-pie">
+        <input type="hidden" name="tags" value="dessert">
+        <input type="hidden" name="tags" value="holiday">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

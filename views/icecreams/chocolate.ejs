@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Ice Cream Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Chocolate Ice Cream</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups heavy cream</li>
+            <li>1 cup whole milk</li>
+            <li>3/4 cup granulated sugar</li>
+            <li>1/2 cup unsweetened cocoa powder</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>1 cup chocolate chips or chopped chocolate</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>ice cream</li>
+            <li>desert</li>
+        </ol>
+    </section>
+
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a saucepan, heat the whole milk until it's warm but not boiling.</li>
+            <li>In a separate bowl, whisk together cocoa powder and sugar, then gradually add the warm milk, whisking to avoid lumps.</li>
+            <li>Return the mixture to the saucepan and heat over medium heat until it's well combined. Remove from heat and let it cool.</li>
+            <li>In another bowl, whip the heavy cream until stiff peaks form.</li>
+            <li>Gently fold the whipped cream into the chocolate mixture until smooth and well combined.</li>
+            <li>Add vanilla extract and fold in the chocolate chips or chopped chocolate.</li>
+            <li>Pour the mixture into an ice cream maker and churn according to the manufacturer's instructions.</li>
+            <li>Transfer the churned ice cream into a lidded container and freeze for a few hours or until it reaches your desired consistency.</li>
+            <li>Scoop and serve your delicious homemade Chocolate Ice Cream!</li>
+        </ol>
+    </section>
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="chocolate">
+        <input type="hidden" name="tags" value="icecream">
+        <input type="hidden" name="tags" value="dessert">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

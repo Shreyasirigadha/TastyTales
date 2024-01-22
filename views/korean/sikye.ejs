@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikye Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Sikye</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup sweet rice (malt barley)</li>
+            <li>6 cups water</li>
+            <li>1 cup sugar</li>
+            <li>1/4 cup pine nuts or jujubes (optional, for garnish)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>Sikye</li>
+            <li>Korean</li>
+            <li>Drink</li>
+            <li>Sweet</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Rinse the sweet rice in cold water until the water becomes clear.</li>
+            <li>In a large pot, combine the sweet rice and water. Bring to a boil, then reduce the heat to low and simmer for about 20-30 minutes until the rice is fully cooked.</li>
+            <li>Strain the liquid from the rice using a fine mesh sieve, collecting the liquid in a separate bowl or pot.</li>
+            <li>While the liquid is still warm, dissolve sugar in it, stirring until fully combined.</li>
+            <li>Allow the sweet rice drink (Sikye) to cool to room temperature and then refrigerate until chilled.</li>
+            <li>Serve in glasses, garnished with pine nuts or jujubes if desired.</li>
+            <li>Enjoy your refreshing Sikye!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Sikye">
+        <input type="hidden" name="tags" value="Sikye">
+        <input type="hidden" name="tags" value="Korean">
+        <input type="hidden" name="tags" value="Drink">
+        <input type="hidden" name="tags" value="Sweet">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

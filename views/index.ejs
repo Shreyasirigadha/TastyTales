@@ -1,0 +1,1163 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Recipe Book</title>
+</head>
+<style>
+  h3{
+    color: black;
+  }
+  h2{
+    color: white;
+  }
+</style>
+
+<header>
+  <nav>
+    <a href="/add">Add a Recipe</a>
+    <a href="/about">About</a>
+    <a href="/help">Help</a>
+  </nav>
+  <img src="homepage2.jpeg" alt="online Recipe Book">
+      <h1>Online Recipe Book</h1>
+      <h3>Unveil the Artistry of Flavor: Where Grey Wood Meets Culinary Mastery in Harmonious Hues.</h3>
+</header>
+  <!-- Add this inside the <section id="search"> ... </section> in your index.ejs file -->
+<section id="search">
+  <h2>Search Recipes</h2>
+
+  <form action="/" method="GET" id="searchForm">
+      <input type="text" id="searchInput" name="search" placeholder="Search for recipes...">
+      <button type="submit" href="/views/search_results.ejs">Search</button>
+  </form>
+
+<!-- Update the search results section in your index.ejs file -->
+<div id="searchResultsContainer">
+  <% if (searchQuery) { %>
+    <h2>Search Results for "<%= searchQuery %>"</h2>
+    <% if (recipes.length === 0) { %>
+      <p>No results found.</p>
+    <% } else { %>
+      <ul>
+        <% recipes.forEach(recipe => { %>
+          <li>
+            <h3><%= recipe.title %></h3>
+            <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+            <p><strong>Procedure:</strong> <%= recipe.procedure %></p>
+            <p><strong>Tags:</strong> <%= recipe.tags.join(', ') %></p>
+            <form action="/delete/<%= recipe._id %>" method="POST">
+              <button type="submit">Delete Recipe</button>
+            </form>
+            <a href="/view-recipe/<%= recipe._id %>">View Recipe</a>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+  <% } %>
+</div>
+
+  
+
+  
+<script defer src="search.js" data-recipes="<%- JSON.stringify(recipes) %>"></script>
+
+<!-- Add this inside the <section id="ingredient-selection"> ... </section> in your index.ejs file -->
+<section id="ingredient-selection">
+    <h2>Select Ingredients</h2>
+    <form id="ingredientForm">
+      <!-- List of checkboxes for ingredients -->
+      <label><input type="checkbox" name="ingredient" value="chicken"> chicken</label>
+      <label><input type="checkbox" name="ingredient" value="eggs"> eggs</label>
+      <!-- Add more checkboxes for each ingredient -->
+  
+      <button type="submit">Search Recipes</button>
+    </form>
+  </section>
+
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  
+    button {
+      /* Add any additional styling you want for the buttons */
+      padding: 5px 10px;
+    }
+  </style>
+  
+  <h2>Tags:</h2>
+  <ul>
+    <% recipes.forEach(recipe => { %>
+      <% recipe.tags.forEach(tag => { %>
+        <li>
+          <form action="/search-by-tag/<%= tag %>" method="GET">
+            <button type="submit" name="tag" value="<%= tag %>"><%= tag %></button>
+          </form>
+        </li>
+      <% }); %>
+    <% }); %>
+  </ul>
+  
+
+  
+
+
+
+  <section>
+    <h2>Popular Recipes</h2>
+    <div class="recipe-container">
+        <div class="recipe-card" style="background-image: url('featured/samosa.jpeg'); background-size: cover;">
+            <h3>Samosa</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/featured/samosa">View Recipe</a>
+        </div>
+
+        <div class="recipe-card" style="background-image: url('featured/channa.jpeg'); background-size: cover;">
+            <h3>Channa Masala</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/featured/Channa-Masala" > View Recipe</a>
+        </div>
+
+        <div class="recipe-card" style="background-image: url('featured/idli.jpeg'); background-size: cover;">
+            <h3>Idli</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/featured/idly" > View Recipe</a>            
+        </div>
+
+        <div class="recipe-card" style="background-image: url('featured/mango.jpeg'); background-size: cover;">
+            <h3>Mango Juice</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/featured/mango" > View Recipe</a>
+        </div>
+
+        <div class="recipe-card" style="background-image: url('featured/chicken.jpeg'); background-size: cover;">
+            <h3>Chicken Curry</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/featured/chicken-curry" > View Recipe</a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+  <h2> Breakfast Recipes</h2>
+  <div class="recipe-container">
+    
+      <div class="recipe-card" style="background-image: url('featured/idli.jpeg'); background-size: cover;">
+          <h3>Idli</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/featured/idly" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/alooparata.jpeg'); background-size: cover;">
+          <h3>Aloo Paratha</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/alooparata" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/avocado.jpeg'); background-size: cover;">
+          <h3>Avocado Toast</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/avocadotoast" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/dosa.jpeg'); background-size: cover;">
+          <h3>Dosa with Chutney</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/dosa" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/oatmeal.jpeg'); background-size: cover;">
+          <h3>Oatmeal</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/oatmeal" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/pancake.jpeg'); background-size: cover;">
+          <h3>Pancakes</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/pancakes" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/poha.jpeg'); background-size: cover;">
+          <h3>Poha</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/poha" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/scrambled.jpeg'); background-size: cover;">
+          <h3>Scrambled Eggs</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/scrambledegg" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/upma.jpeg'); background-size: cover;">
+          <h3>Upma</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/upma" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('breakfast/vada.jpeg'); background-size: cover;">
+          <h3>Vada</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/vada" > View Recipe</a>
+      </div>
+  </div>
+</section>
+  
+<section>
+  <h2> Vegan Recipes</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('vegan/padthai.jpeg'); background-size: cover;">
+          <h3>Vegan Pad Thai</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/vegan-pad-thai" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/aglio.jpeg'); background-size: cover;">
+          <h3>Aglio-e-Oilo</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/aglio-e-oilo" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/cauli.jpeg'); background-size: cover;">
+          <h3>Cauliflower Buffalo Wings</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/cauliflower-buffalo-wings" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/stuffed.jpeg'); background-size: cover;">
+          <h3>Stuffed Bellpepper</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/stuffed-bellpeppers" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/vegan-buddha-soup.jpeg'); background-size: cover;">
+          <h3>Vegan Buddha Soup</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/vegan-buddha-soup" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/stir.jpeg'); background-size: cover;">
+          <h3>Vegan Fried Stir </h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/vegan-fried-stir" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/lentil.jpeg'); background-size: cover;">
+          <h3>Vegan lentil Soup</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/vegan-lentil-soup" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/pizza.jpeg'); background-size: cover;">
+          <h3>Vegan Pizza</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/vegan-pizza" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/chickpea.jpeg'); background-size: cover;">
+          <h3>Chickpea Salad Sandwich</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/chickpea-salad-sandwich" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('vegan/tacos.jpeg'); background-size: cover;">
+          <h3>Vegan Tacos</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegan_dish/vegan-tacos" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2> Egg Recipes</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('breakfast/scrambled.jpeg'); background-size: cover;">
+          <h3>Scrambled Eggs</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/breakfast/scrambledegg" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggcurry.jpeg'); background-size: cover;">
+          <h3>Boiled Egg Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/boiled-egg-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggbhurji.jpeg'); background-size: cover;">
+          <h3>Egg Bhurji</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-bhurji" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggbiryani.jpeg'); background-size: cover;">
+          <h3>Egg Biryani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-biryani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggcoco.jpeg'); background-size: cover;">
+          <h3>Egg Curry with Coconut Milk</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-curry-coconut" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggmalai.jpeg'); background-size: cover;">
+          <h3>Egg Malai Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-malai-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggpakoda.jpeg'); background-size: cover;">
+          <h3>Egg Pakoda</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-pakoda" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/eggroll.jpeg'); background-size: cover;">
+          <h3>Egg Roll</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-roll" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/omelette.jpeg'); background-size: cover;">
+          <h3>Omelette</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/omelette" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('eggs/tomatoegg.jpeg'); background-size: cover;">
+          <h3>Tomato Egg</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/tomato-egg" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2> Chicken and Meat</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/chicken tikka masala.jpg'); background-size: cover;">
+          <h3>Chicken Tikka Masala</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/chicken-tikka-masala" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/chicken biryani.jpg'); background-size: cover;">
+          <h3>Chicken Biryani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/chicken-biryani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/butter chicken.jpg'); background-size: cover;">
+          <h3>Butter Chicken</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/butter-chicken" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/tandoori chicken.jpg'); background-size: cover;">
+          <h3>Tandoori Chicken </h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/tandoori-chicken" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/chicken korma.jpg'); background-size: cover;">
+          <h3>Chicken Korma</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/chicken-korma" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/mutton rogon.jpg'); background-size: cover;">
+          <h3>Mutton Rogan</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/mutton-rogan" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/kuma curry.jpg'); background-size: cover;">
+          <h3>Kuma Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/kuma-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/goat paya curry.jpg'); background-size: cover;">
+          <h3>Goat Paya Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/goat-paya-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/nihari.jpg'); background-size: cover;">
+          <h3>Nihari</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/nihari" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Chicken and Meat/mutton korma.jpg'); background-size: cover;">
+          <h3>Mutton Korma</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/chicken/mutton-korma" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Seafood</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('Seafood/gretled lemon garlic shrimp.jpg'); background-size: cover;">
+          <h3>Gretled Lemon Garlic Shrimp</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/gretled-lemon-garlic-shrimp" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/salmon teriyak.jpg'); background-size: cover;">
+          <h3>Salmon Teriyak</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/salmon-teriyaki" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/garlic butter lobster tails.jpg'); background-size: cover;">
+          <h3>Garlic Butter Lobster Tails</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/garlic-butter-lobster-tails" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/thai green curry shrimp.jpg'); background-size: cover;">
+          <h3>Thai Green Curry Shrimp</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/thai-green-curry-shrimp" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/miso glazed salmon.jpg'); background-size: cover;">
+          <h3>Miso Glazed Salmon</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/miso-glazed-salmon" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/prawn masala.jpg'); background-size: cover;">
+          <h3>Prawn Masala</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/prawn-masala" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/fish curry.jpg'); background-size: cover;">
+          <h3>Fish Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/fish-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/crab curry.jpg'); background-size: cover;">
+          <h3>Crab curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/crab-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/kofta curry.jpg'); background-size: cover;">
+          <h3>Fish Kofta Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/fish-kofta" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Seafood/amritsari fish.jpg'); background-size: cover;">
+          <h3>Amristari Fish</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/seafood/amristari-fish" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Rice</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('Rice/jeera rice.jpg'); background-size: cover;">
+          <h3>Jeera Rice</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/jeera" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/chicken biryani.jpg'); background-size: cover;">
+          <h3>Chicken Biryani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/chicken-biryani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/mutton biryani.jpg'); background-size: cover;">
+          <h3>Mutton Biryani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/mutton-biryani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/prawn biryani.jpg'); background-size: cover;">
+          <h3>Prawn Biryani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/prawn-biryani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/egg biryani.jpg'); background-size: cover;">
+          <h3>Egg Biryani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/eggs/egg-biryani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/pulav.jpg'); background-size: cover;">
+          <h3>Pulav</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/pulav" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/tomato rice.jpg'); background-size: cover;">
+          <h3>Tomato Rice</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/tomato-rice" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/khichidi.jpg'); background-size: cover;">
+          <h3>Khichdi</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/khichdi" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/veg fried rice.jpg'); background-size: cover;">
+          <h3>Veg Fried Rice</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/veg-fried-rice" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Rice/pulihora.jpg'); background-size: cover;">
+          <h3>Pulihora</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/rice/pulihora" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Vegetarian</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('Vegetarian/mushroom curry.jpg'); background-size: cover;">
+          <h3>Mushroom Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/mushroom-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/chickpea spinach.jpg'); background-size: cover;">
+          <h3>Chickpea Spinach</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/chickpea-spinach" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/palak paneer.jpg'); background-size: cover;">
+          <h3>Palak Paneer</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/palak-paneer" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/dal makhani.jpg'); background-size: cover;">
+          <h3>Dal Makhani</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/dal-makhani" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/rajma curry.jpg'); background-size: cover;">
+          <h3>Rajma Curry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/rajma-curry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/Sambhar.jpg'); background-size: cover;">
+          <h3>Sambhar</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/sambhar" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/aloo gobi.jpg'); background-size: cover;">
+          <h3>Aloo Gobi</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/aloo-gobi" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/bhindi masala.jpg'); background-size: cover;">
+          <h3>Bhindi Masala</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/bhindi-masala" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/aloo paratha.jpg'); background-size: cover;">
+          <h3>Aloo Pratha</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/aloo-paratha" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Vegetarian/panner butter masala.jpg'); background-size: cover;">
+          <h3>Paneer Butter Masala</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/vegeterian/paneer-butter-masala" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Ice-Creams</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('Ice-Creams/chocolate ice cream.jpg'); background-size: cover;">
+          <h3>Chocolate</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/chocolate" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/strawberry.jpg'); background-size: cover;">
+          <h3>Strawberry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/strawberry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/butterscotch icecream.jpg'); background-size: cover;">
+          <h3>Butterscotch</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/butterscotch" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/vanilla.jpg'); background-size: cover;">
+          <h3>Vanilla</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/vanilla" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/custard apple.jpg'); background-size: cover;">
+          <h3>Custard Apple</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/custard-apple" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/mango ice cream.jpg'); background-size: cover;">
+          <h3>Mango</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/mango" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/mint choco.jpg'); background-size: cover;">
+          <h3>Mint Choco</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/mint-choco" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/rasberry.jpg'); background-size: cover;">
+          <h3>Rasberry</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/rasberry" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/coffee icecream.jpg'); background-size: cover;">
+          <h3>Coffee</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/coffee" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Ice-Creams/cookies cream.jpg'); background-size: cover;">
+          <h3>Cookies Cream</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/icecreams/cookies-cream" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Sweets</h2>
+    <div class="recipe-container">
+        <div class="recipe-card" style="background-image: url('Sweets/gulab jamun.jpg'); background-size: cover;">
+            <h3>Gulab Jamun</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/gulab-jamun" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/Rasgulla.jpeg'); background-size: cover;">
+            <h3>Rasagulla</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/rasgulla" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/kova.jpg'); background-size: cover;">
+            <h3>Kova</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/kova" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/Kheer.jpg'); background-size: cover;">
+            <h3>Kheer</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/kheer" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/jalebi.jpg'); background-size: cover;">
+            <h3>Jalebi</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/jalebi" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/mysore pak.jpeg'); background-size: cover;">
+            <h3>Mysore Pak</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/mysore-pak" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/motichur laddu.jpg'); background-size: cover;">
+            <h3>Motichur Loddu</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/motichur-loddu" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/kaju katli.jpg'); background-size: cover;">
+            <h3>Kaju katli</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/kaju-katli" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/dabal ka meeta.jpg'); background-size: cover;">
+            <h3>Dabal Ka Meeta</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/dabal-ka-meeta" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Sweets/kesari.jpg'); background-size: cover;">
+            <h3>Kesari</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/sweets/kesari" > View Recipe</a>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Drinks</h2>
+    <div class="recipe-container">
+        <div class="recipe-card" style="background-image: url('Drinks/apple juice.jpg'); background-size: cover;">
+            <h3>Apple Juice</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/apple_juice" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/pineapple juice.jpg'); background-size: cover;">
+            <h3>Pineapple Juice</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/pineapple_juice" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/strawberry milkshake.jpg'); background-size: cover;">
+            <h3>Strawberry Milkshake</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/strawberry_milkshake" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/chocolate milkshake.jpg'); background-size: cover;">
+            <h3>Chocolate Milkshake</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/chocolate_milkshake" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/mango milkshake.jpg'); background-size: cover;">
+            <h3>Mango Milkshake</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/mango_milkshake" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/tea.jpg'); background-size: cover;">
+            <h3>Tea</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/tea" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/coffee.jpg'); background-size: cover;">
+            <h3>Coffee</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/coffee" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/hot chocolate.jpg'); background-size: cover;">
+            <h3>Hot Chocolate</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/hot-chocolate" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Drinks/lemonade.jpg'); background-size: cover;">
+            <h3>Lemande</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/drinks/lemonade" > View Recipe</a>
+        </div>
+  
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Indian</h2>
+    <div class="recipe-container">
+        <div class="recipe-card" style="background-image: url('Chicken and Meat/butter chicken.jpg'); background-size: cover;">
+            <h3>Butter Chicken</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chicken/butter-chicken" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Rice/chicken biryani.jpg'); background-size: cover;">
+            <h3>Chicken Biryani </h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/rice/chicken-biryani" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Indian/mutton curry.jpg'); background-size: cover;">
+            <h3>Mutton Curry</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/indian/mutton-curry" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Vegetarian/aloo paratha.jpg'); background-size: cover;">
+            <h3>Aloo Paratha</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/breakfast/alooparata" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Vegetarian/rajma curry.jpg'); background-size: cover;">
+            <h3>Rajma Curry</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/vegeterian/rajma-curry" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Vegetarian/palak paneer.jpg'); background-size: cover;">
+            <h3>Palak Paneer</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/vegeterian/palak-paneer" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Indian/fish fry.jpg'); background-size: cover;">
+            <h3>Fish Fry</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/indian/fish-fry" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Seafood/prawn masala.jpg'); background-size: cover;">
+            <h3>Prawn Masala</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/seafood/prawn-masala" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Vegetarian/mushroom curry.jpg'); background-size: cover;">
+            <h3>Mushroom Curry</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/vegeterian/mushroom-curry" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Rice/khichidi.jpg'); background-size: cover;">
+            <h3>Khichdi</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/rice/khichdi" > View Recipe</a>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Korean</h2>
+    <div class="recipe-container">
+        <div class="recipe-card" style="background-image: url('Korean/kimchi.jpg'); background-size: cover;">
+            <h3>Kimchi</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/kimchi" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/bibimbap.jpg'); background-size: cover;">
+            <h3>Bibimbap </h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/bibimbap" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/samgyeopsal.jpg'); background-size: cover;">
+            <h3>Samgyeopsal</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/samgyeopsal" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/jajangmyeon.jpg'); background-size: cover;">
+            <h3>Jajangmyeon</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/jajangmyeon" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/bulgogi.jpg'); background-size: cover;">
+            <h3>Bulgogi</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/bulgogi" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/hotteok.jpg'); background-size: cover;">
+            <h3>Hoddeok</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/hoddeok" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/jokbal.jpg'); background-size: cover;">
+            <h3>Jokbal</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/jokbal" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/sikhye.jpg'); background-size: cover;">
+            <h3>Sikye</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/sikye" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/japche.jpg'); background-size: cover;">
+            <h3>Japchae</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/japche" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Korean/tteokbokki.jpg'); background-size: cover;">
+            <h3>Heokbokki</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/korean/tteobbokki" > View Recipe</a>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Chinese</h2>
+    <div class="recipe-container">
+        <div class="recipe-card" style="background-image: url('Chinese/mapo tofu.jpg'); background-size: cover;">
+            <h3>Mapo Tofo</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/mapo-tofu" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/scallion pancake.jpg'); background-size: cover;">
+            <h3>Scallion Pancakes </h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/scallion-pancakes" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/kung pao chicken.jpg'); background-size: cover;">
+            <h3>Kung Pao Chicken</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/kung-pao-chicken" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/sweet and sour pork.jpg'); background-size: cover;">
+            <h3>Sweet and Sour Pork</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/sweet and sour pork" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/dumplings.jpg'); background-size: cover;">
+            <h3>Dumplings</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/dumplings" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/peking duck.jpg'); background-size: cover;">
+            <h3>Peking Duck</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/peking-duck" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/beef and broccoli.jpg'); background-size: cover;">
+            <h3>Beef and Broccoli</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/beef and broccoli" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/spring rolls.jpg'); background-size: cover;">
+            <h3>Spring rolls</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/spring rolls" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/steamed fish.jpg'); background-size: cover;">
+            <h3>Steamed Fish</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/steamed fish" > View Recipe</a>
+        </div>
+  
+        <div class="recipe-card" style="background-image: url('Chinese/chow mein.jpg'); background-size: cover;">
+            <h3>Chowmein</h3>
+            <p>Description of the recipe goes here.</p>
+            <a href="/views/chinese/chowmein" > View Recipe</a>
+        </div>
+    </div>
+  </section>
+</section>
+<section>
+  <h2>American</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('American/hamburger.jpg'); background-size: cover;">
+          <h3>Hamburger</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/hamburger" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/mac and cheese.jpg'); background-size: cover;">
+          <h3>Mac and Cheese </h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/mac and cheese" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/hotdog.jpg'); background-size: cover;">
+          <h3>Hotdog</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/hotdog" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/bbq ribs.jpg'); background-size: cover;">
+          <h3>bbq ribs</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/bbq ribs" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/pizza.jpg'); background-size: cover;">
+          <h3>Pizza</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/pizza" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/buffalo wings.jpg'); background-size: cover;">
+          <h3>Buffalo Wings</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/buffalo wings" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/caesar salad.jpg'); background-size: cover;">
+          <h3>Ceason salad</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/ceasar-salad" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/corn bread.jpg'); background-size: cover;">
+          <h3>Corn Bread</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/corn-bread" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/pumpkin pie.jpg'); background-size: cover;">
+          <h3>Pumpkin Pie</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/pumpkin-pie" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('American/cheese burger.jpg'); background-size: cover;">
+          <h3>Cheese Burger</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/american/cheese burger" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h2>Japanese</h2>
+  <div class="recipe-container">
+      <div class="recipe-card" style="background-image: url('Japanese/sushi.jpg'); background-size: cover;">
+          <h3>Sushi</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/sushi" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/ramen.jpg'); background-size: cover;">
+          <h3>Ramen </h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/ramen" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/tempura.jpg'); background-size: cover;">
+          <h3>Tempura</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/tempura" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/teriyaki chicken.jpg'); background-size: cover;">
+          <h3>Teriyaki Chicken</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/teriyaki-chicken" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/tonkatsu.jpg'); background-size: cover;">
+          <h3>Tonkatsu</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/tonkatsu" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/miso soup.jpg'); background-size: cover;">
+          <h3>Miso soup</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/miso-soup" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/gyoza.jpg'); background-size: cover;">
+          <h3>Gyoza</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/gyoza" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/sukiyaki.jpg'); background-size: cover;">
+          <h3>Sukiyaki</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/sukiyaki" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/anmitsu.jpg'); background-size: cover;">
+          <h3>Anmitsu</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/anmitsu" > View Recipe</a>
+      </div>
+
+      <div class="recipe-card" style="background-image: url('Japanese/matcha ice cream.jpg'); background-size: cover;">
+          <h3>Matcha ice-cream</h3>
+          <p>Description of the recipe goes here.</p>
+          <a href="/views/japanese/matcha-ice_cream" > View Recipe</a>
+      </div>
+  </div>
+</section>
+
+<!-- Add this script at the end of your index.ejs file -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ingredientForm = document.getElementById('ingredientForm');
+  
+      ingredientForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+  
+        // Get selected ingredients
+        const selectedIngredients = Array.from(ingredientForm.elements['ingredient'])
+          .filter(ingredientCheckbox => ingredientCheckbox.checked)
+          .map(ingredientCheckbox => ingredientCheckbox.value);
+  
+        // Send a request to the server with selected ingredients
+        try {
+          const response = await fetch(`/search-by-ingredients?ingredients=${encodeURIComponent(selectedIngredients.join(','))}`);
+          const recipes = await response.json();
+  
+          // Display search results as needed
+          console.log('Recipes with selected ingredients:', recipes);
+          // Update the UI to show recipes
+        } catch (error) {
+          console.error('Error fetching recipes:', error);
+        }
+      });
+    });
+  </script>
+  
+
+
+
+</body>
+</html>
+<footer>
+    <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+</footer>
+</body>
+

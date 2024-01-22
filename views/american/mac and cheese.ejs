@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac and Cheese Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css">
+</head>
+<body>
+    <header>
+        <h1><marquee height="45">Mac and Cheese</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>8 ounces elbow macaroni</li>
+            <li>1/4 cup unsalted butter</li>
+            <li>1/4 cup all-purpose flour</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/4 teaspoon black pepper</li>
+            <li>1/4 teaspoon garlic powder</li>
+            <li>1/4 teaspoon onion powder</li>
+            <li>2 cups milk</li>
+            <li>2 cups shredded sharp cheddar cheese</li>
+            <li>1/2 cup grated Parmesan cheese</li>
+            <li>1/2 cup breadcrumbs (optional, for topping)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol>
+            <li>dinner</li>
+            <li>cheese</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Cook the elbow macaroni according to package instructions. Drain and set aside.</li>
+            <li>In a large saucepan, melt the butter over medium heat. Stir in the flour, salt, pepper, garlic powder, and onion powder to make a roux.</li>
+            <li>Gradually whisk in the milk, stirring constantly until the mixture thickens and comes to a simmer.</li>
+            <li>Reduce heat to low and add the shredded cheddar cheese and grated Parmesan cheese. Stir until the cheeses are melted and the sauce is smooth.</li>
+            <li>Add the cooked macaroni to the cheese sauce, stirring until well coated.</li>
+            <li>If desired, transfer the mac and cheese to a baking dish, sprinkle breadcrumbs on top, and bake in a preheated oven at 350°F (180°C) for 15-20 minutes or until golden and bubbly.</li>
+            <li>Serve the Mac and Cheese hot and enjoy!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="mac-and-cheese">
+        <input type="hidden" name="tags" value="dinner">
+        <input type="hidden" name="tags" value="cheese">
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oatmeal Recipe</title>
+    <link rel="stylesheet" href="/recipestyle.css"> 
+</head>
+<body>
+    <header>
+        <h1><marquee behavior="alternate";bgcolor="yellow";height="1000" >Oatmeal</marquee></h1>
+    </header>
+
+    <section>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup old-fashioned oats</li>
+            <li>2 cups milk (dairy or plant-based)</li>
+            <li>1 ripe banana, mashed</li>
+            <li>1 tablespoon honey or maple syrup</li>
+            <li>1/2 teaspoon vanilla extract</li>
+            <li>Pinch of salt</li>
+            <li>Optional toppings: sliced fruits, nuts, seeds, or dried berries</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Tags</h2>
+        <ol>
+            <li>healthy</li>
+            
+        </ol>
+    </section>
+
+    <section>
+        <h2>Instructions</h2>
+        <ol>
+            <li>In a saucepan, combine oats and milk. Bring to a simmer over medium heat.</li>
+            <li>Add the mashed banana, honey or maple syrup, vanilla extract, and a pinch of salt. Stir well.</li>
+            <li>Cook the oatmeal, stirring occasionally, until it reaches your desired thickness and the oats are tender. This usually takes about 5-7 minutes.</li>
+            <li>Remove from heat and let it sit for a minute to thicken further.</li>
+            <li>Serve the oatmeal in bowls and top with your favorite toppings, such as sliced fruits, nuts, seeds, or dried berries.</li>
+            <li>Enjoy your delicious and nutritious oatmeal!</li>
+        </ol>
+    </section>
+
+    <form action="/save-recipe" method="POST">
+        <input type="hidden" name="title" value="Oatmeal">
+        <input type="hidden" name="tags" value="healthy">
+        <input type="hidden" name="tags" value="breakfast">
+        <button type="submit">Save Recipe</button>
+      </form>
+
+    <footer>
+        <p>&copy; 2023 Online Recipe Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>
